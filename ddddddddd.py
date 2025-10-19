@@ -1,3 +1,5 @@
+from PyQt6.QtSql import password
+
 from untitled_ui import Ui_QMainWindow
 import random as r
 import string as s
@@ -29,6 +31,10 @@ def generate_password(length=8, use_uppercase=True, use_lowercase=True, use_digi
 if __name__ == '__main__':
     try:
         length = Ui_QMainWindow.self.spinBox()
+
+        password = generate_password(length=length)
+
+
 
     except:
         pass
