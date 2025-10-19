@@ -3,6 +3,12 @@ import random as r
 import string as s
 
 
+class MainWindow(Ui_QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_QMainWindow()
+        self.ui.setupUi(self)
+
 def generate_password(length=8, use_uppercase=True, use_lowercase=True, use_digits=True, use_special=True):
     characters = ' '
     if use_uppercase:
@@ -22,4 +28,7 @@ def generate_password(length=8, use_uppercase=True, use_lowercase=True, use_digi
 
 if __name__ == '__main__':
     try:
-        length = 1
+        length = Ui_QMainWindow.self.spinBox()
+
+    except:
+        pass
