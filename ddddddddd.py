@@ -1,3 +1,4 @@
+import random
 import random as r
 import string as s
 
@@ -15,3 +16,9 @@ def generate_password(length=8, use_uppercase=True, use_lowercase=True, use_digi
 
     if not characters:
         raise ValueError('')
+
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+if __name__ == '__main__':
+    pass
