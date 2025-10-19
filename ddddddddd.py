@@ -1,4 +1,4 @@
-import random
+from untitled_ui import Ui_QMainWindow
 import random as r
 import string as s
 
@@ -17,8 +17,9 @@ def generate_password(length=8, use_uppercase=True, use_lowercase=True, use_digi
     if not characters:
         raise ValueError('')
 
-    password = ''.join(random.choice(characters) for _ in range(length))
+    password = ''.join(r.choice(characters) for _ in range(length))
     return password
 
 if __name__ == '__main__':
-    pass
+    try:
+        length = 1
