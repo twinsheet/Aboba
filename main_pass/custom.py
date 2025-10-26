@@ -7,3 +7,4 @@ class CustomDialog(QtWidgets.QMainWindow):
         super().__init__(parent)
         self.ui = Ui_QMainWindow()
         self.ui.setupUi(self)
+
