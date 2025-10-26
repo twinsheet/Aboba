@@ -13,6 +13,8 @@ class MainWindow(QMainWindow):
 
         self.ui.pushButton.clicked.connect(self.generate_password)
         self.ui.pushButton_2.clicked.connect(self.copyrate)
+        self.ui.pushButton_6.clicked.connect(self.settings)
+        self.ui.pushButton_3.clicked.connect(self.clear_all)
 
         self.ui.checkBox.setChecked(True)
         self.ui.checkBox_2.setChecked(True)
@@ -55,6 +57,13 @@ class MainWindow(QMainWindow):
         if p:
             clipboard = QApplication.clipboard()
             clipboard.setText(p)
+
+    def settings(self):
+        pass
+
+    def clear_all(self):
+        self.ui.lineEdit.clear()
+
 
 
 app = QApplication([])
